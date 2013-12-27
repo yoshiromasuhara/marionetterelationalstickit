@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <title>サンプル</title>
+        <link href="/20131227backbone/lib/css/bootstrap.min.css" rel="stylesheet" >
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+
+        <div class="row">
+            <div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+                <h2>取引先情報</h2>
+                <div id="account_wrap">
+                </div>
+                <hr />
+                <h2>担当者情報</h2>
+                <div id="contact_wrap">
+                </div>
+                <hr />
+                <div id="action_wrap">
+                </div>
+            </div>
+        </div>
+
+        <!-- ■■■ テンプレ関連 ■■■ -->
+
+        <!-- ■■■ 取引先 ■■■ -->
+        <script type="text/template" id="tmpl_account">
+            <dt>ID</dt>
+            <dd><p><%= id %></p></dd>
+            <dt>名前</dt>
+            <dd><input type="text" class="form-control name" id="name" value="<%= name %>" /></dd>
+            <dt>電話番号</dt>
+            <dd><input type="text" class="form-control tel" id="tel" value="<%= tel %>" /><dd>
+        </script>
+
+        <!-- ■■■ 担当者一覧 ■■■ -->
+        <script type="text/template" id="tmpl_contact">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>名前</th>
+                        <th>電話番号</th>
+                    </tr>
+                </thaed>
+                <tbody>
+                </tbody>
+            </table>
+        </script>
+        <script type="text/template" id="tmpl_contactrow">
+            <td><%= id %></td>
+            <td><input type="text" class="form-control name" id="name_<%= id %>" value="<%= name %>" /></td>
+            <td><input type="text" class="form-control tel" id="tel_<%= id %>" value="<%= tel %>" /></td>
+        </script>
+
+        <!-- ■■■ 更新するボタン ■■■ -->
+        <script type="text/template" id="tmpl_action">
+            <button id="save" class="btn btn-primary" style="margin:0 0 30px 30px;">更新する</button>
+        </script>
+
+        <script src="/20131227backbone/lib/js/jquery-1.9.1.min.js"></script>
+        <script src="/20131227backbone/lib/js/json2.js"></script>
+        <script src="/20131227backbone/lib/js/underscore.js"></script>
+        <script src="/20131227backbone/lib/js/backbone-min.js"></script>
+        <script src="/20131227backbone/lib/js/backbone.marionette.min.js"></script>
+        <script src="/20131227backbone/lib/js/backbone.stickit.min.js"></script>
+        <script src="/20131227backbone/lib/js/backbone-relational.min.js"></script>
+        <script src="/20131227backbone/lib/js/bootstrap.min.js"></script>
+        <script src="/20131227backbone/sample.js"></script>
+    </body>
+</htm>
